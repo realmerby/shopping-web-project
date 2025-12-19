@@ -1,4 +1,3 @@
-// ÜRÜN VERİ TABANI
 const productsData = [
     { name: "Tshirt", price: 179, img: "assets/tshirt.png", cat: "erkek", type: "tshirt" },
     { name: "Jacket", price: 299, img: "assets/jack.png", cat: "erkek", type: "ceket" },
@@ -8,13 +7,12 @@ const productsData = [
 
 let cart = JSON.parse(localStorage.getItem('MUCAK_CART')) || [];
 
-// Yan Menü Kontrolü
+
 function toggleMenu() {
     const menu = document.getElementById("side-menu");
     menu.style.width = (menu.style.width === "320px") ? "0" : "320px";
 }
 
-// Ürünleri Listeleme (kategori.html için)
 function renderProducts() {
     const container = document.getElementById('category-products');
     const title = document.getElementById('category-title');
@@ -48,7 +46,7 @@ function renderProducts() {
     });
 }
 
-// Sepete Ekleme
+
 function addToCart(name, price, img) {
     cart.push({ name, price, image: img, id: Date.now() });
     localStorage.setItem('MUCAK_CART', JSON.stringify(cart));
@@ -61,7 +59,7 @@ function updateCartCount() {
     if (el) el.innerText = cart.length;
 }
 
-// Sepet Sayfası Görüntüleme
+
 function displayCart() {
     const container = document.getElementById('cart-items');
     const totalEl = document.getElementById('total-price');
