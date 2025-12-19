@@ -1,43 +1,71 @@
 <!doctype html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mucak Luxury</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mucak Luxury | Premium Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<h1>Mucak Luxury</h1>
-<h2>Ürünler</h2>
 
-<div class="products-container">
-<div class="product">
-    <h3>Tshirt</h3>
-    <img src="assets/tshirt.png" alt="">
-    <p>Fiyat: 179 TL</p>
-    <p>%100 pamuk</p>
-</div>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            <div class="logo">MUCAK LUXURY</div>
+        </div>
+        <div class="nav-links main-nav">
+            <a href="kategori.html?cat=erkek">ERKEK</a>
+            <a href="kategori.html?cat=kadin">KADIN</a>
+            <a href="kategori.html?type=yeni">YENİ SEZON</a>
+        </div>
+        <div class="nav-right">
+            <a href="sepet.html" class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
 
+    <div id="side-menu" class="side-menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <div class="side-content">
+            <h3>Koleksiyonlar</h3>
+            <a href="kategori.html?cat=erkek">Erkek</a>
+            <a href="kategori.html?cat=kadin">Kadın</a>
+            <hr style="border:0; border-top:1px solid rgba(181,254,217,0.1); margin:20px 0;">
+            <h3>Kategoriler</h3>
+            <a href="kategori.html?type=tshirt">T-shirt</a>
+            <a href="kategori.html?type=pantolon">Pantolon</a>
+            <a href="kategori.html?type=ceket">Ceket</a>
+        </div>
+    </div>
 
-<div class="product">
-    <h3>Jacket</h3>
-    <img src="assets/jack.png" alt="">
-    <p>Fiyat: 299 TL</p>
-    <p>Rahat ceket.</p>
-</div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>PREMIUM WEAR</h1>
+                <p style="color:white; margin-bottom:30px; letter-spacing:2px;">Sadelik en yüksek gelişmişlik düzeyidir.</p>
+                <a href="javascript:void(0)" onclick="toggleMenu()" class="cta-button">KEŞFET</a>
+            </div>
+        </section>
 
-<div class="product">
-    <h3>Baggy jeans</h3>
-    <img src="assets/jean.png" alt="">
-    <p>Fiyat: 499 TL</p>
-    <p>Klasik baggy</p>
-</div>
-</div>
+        <div class="container">
+            <div style="max-width: 800px; margin: auto; text-align: center;">
+                <h2 style="color: var(--dark-gold); margin-bottom: 20px;">HİKAYEMİZ</h2>
+                <p style="color: var(--sage); font-size: 18px;">
+                    Mucak Luxury, sadece bir kıyafet markası değil; bir yaşam tarzıdır. 
+                    Seçtiğimiz renk paletinden, kumaşlarımızın dokusuna kadar her detayda zarafeti arıyoruz.
+                </p>
+            </div>
+        </div>
+    </main>
 
-<h2>Hakkımızda</h2>
-<p>hakkinda kismi...</p>
+    <footer>
+        <p>&copy; 2024 MUCAK LUXURY</p>
+        <p style="font-size: 11px; margin-top: 10px; opacity: 0.6;">İSTANBUL | LONDON | PARIS</p>
+    </footer>
 
-<h2>İletişim</h2>
-<p>Email: ornek@gmail.com</p>
+    <script src="script.js"></script>
 </body>
 </html>

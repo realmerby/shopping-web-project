@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Sepetim | Mucak Luxury</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">MUCAK LUXURY</a></div>
+        <div class="nav-links">
+            <a href="index.html">Mağazaya Dön</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2 style="margin-bottom:30px; color:var(--dark-gold);">Alışveriş Sepetiniz</h2>
+            <div id="cart-items"></div>
+            
+            <div class="cart-summary" id="cart-summary">
+                <h3>Toplam: <span id="total-price">0 TL</span></h3>
+                <button class="cta-button" style="margin-top:20px; width:100%;" onclick="showCheckout()">ÖDEMEYE GEÇ</button>
+            </div>
+
+            <div id="checkout-section" style="display:none; margin-top:40px; padding:30px; background:white; border:1px solid #ddd; max-width:600px; margin-inline:auto;">
+                <h2 style="margin-bottom:20px;">Ödeme Bilgileri</h2>
+                <form onsubmit="processPayment(event)">
+                    <input type="text" placeholder="Kart Sahibi" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc;" required>
+                    <input type="text" placeholder="Kart Numarası" maxlength="16" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc;" required>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" placeholder="AA/YY" style="flex:1; padding:12px; border:1px solid #ccc;" required>
+                        <input type="text" placeholder="CVV" style="flex:1; padding:12px; border:1px solid #ccc;" required>
+                    </div>
+                    <button type="submit" class="cta-button" style="width:100%; margin-top:20px; background:var(--dark-gold); color:white;">ÖDEMEYİ TAMAMLA</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MUCAK LUXURY</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
