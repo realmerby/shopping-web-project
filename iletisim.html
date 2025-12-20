@@ -3,32 +3,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Koleksiyon | Mucak Luxury</title>
-    <link rel="stylesheet" href="style.css">
+    <title>İletişim | Mucak Luxury</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>M</text></svg>">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-left">
             <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
             <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">MUCAK LUXURY</a></div>
         </div>
         <div class="nav-right">
-            <a href="javascript:void(0)" onclick="toggleSearch()" style="text-decoration: none; margin-right: 20px; color: var(--dark-gold); font-size: 20px;">
+             <a href="javascript:void(0)" onclick="toggleSearch()" style="text-decoration: none; margin-right: 20px; color: var(--dark-gold); font-size: 20px;">
                 <i class="fas fa-search"></i>
             </a>
-
             <a href="sepet.html" class="cart-icon">
                 <i class="fas fa-shopping-bag"></i>
                 <span id="cart-count">0</span>
             </a>
         </div>
     </nav>
-
+    
     <div id="side-menu" class="side-menu">
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
         <div class="side-content">
+            <h3>Koleksiyonlar</h3>
+            <a href="kategori.html?cat=erkek">Erkek</a>
+            <a href="kategori.html?cat=kadin">Kadın</a>
+            <hr style="border:0; border-top:1px solid rgba(181,254,217,0.1); margin:20px 0;">
             <h3>Kategoriler</h3>
             <a href="kategori.html?type=tshirt">T-shirt</a>
             <a href="kategori.html?type=pantolon">Pantolon</a>
@@ -36,11 +40,53 @@
         </div>
     </div>
 
+    <div id="search-overlay" class="search-overlay">
+        <div class="close-search" onclick="toggleSearch()">&times;</div>
+        <div class="search-content">
+            <input type="text" id="search-input" placeholder="Ürün ara... (Örn: Ceket, T-shirt)" onkeyup="performSearch()">
+            <div id="search-results" class="search-results-grid"></div>
+        </div>
+    </div>
+
     <main>
+        <div class="page-header">
+            <h1>BİZE ULAŞIN</h1>
+            <p style="color:var(--sage); margin-top:10px;">Sorularınız için her zaman buradayız.</p>
+        </div>
+
         <div class="container">
-            <h2 id="category-title" style="margin-bottom:40px; text-align:left; color:var(--dark-gold);">Koleksiyon</h2>
-            <div class="products-container" id="category-products">
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Mesajınız alındı! En kısa sürede döneceğiz.');">
+                        <div class="form-group">
+                            <label>Adınız Soyadınız</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-posta Adresiniz</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Konu</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Mesajınız</label>
+                            <textarea rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width:100%; border:none; color:var(--dark-gold);">GÖNDER</button>
+                    </form>
                 </div>
+
+                <div class="contact-info">
+                    <h3 style="margin-bottom:20px; color:var(--dark-gold);">Merkez Ofis</h3>
+                    <p style="margin-bottom:15px; color:var(--sage);"><i class="fas fa-map-marker-alt" style="width:20px;"></i> Abdi İpekçi Cad. No:42, Nişantaşı / İSTANBUL</p>
+                    <p style="margin-bottom:15px; color:var(--sage);"><i class="fas fa-phone" style="width:20px;"></i> +90 (212) 345 67 89</p>
+                    <p style="margin-bottom:30px; color:var(--sage);"><i class="fas fa-envelope" style="width:20px;"></i> info@mucakluxury.com</p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9633698339308!2d28.99304877668601!3d41.04797587134563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7650656bd63%3A0x8ca058b28c20b6c3!2zTmnFm2FudGHFn8SxLCDFnmnFm2xpLCAzNDM2MyDFnmnFm2xpL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1714909012345!5m2!1str!2str" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -115,6 +161,11 @@
         </div>
     </footer>
     
+
+    <a href="https://wa.me/90532708677" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <div id="search-overlay" class="search-overlay">
         <div class="close-search" onclick="toggleSearch()">&times;</div>
         <div class="search-content">
@@ -122,9 +173,8 @@
             <div id="search-results" class="search-results-grid"></div>
         </div>
     </div>
-    <a href="https://wa.me/905432708677" target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+
     <script src="script.js"></script>
+
 </body>
 </html>

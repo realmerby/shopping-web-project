@@ -5,6 +5,8 @@
     <title>Sepetim | Mucak Luxury</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>M</text></svg>">
+
 </head>
 <body>
     <nav class="navbar">
@@ -25,24 +27,107 @@
             </div>
 
             <div id="checkout-section" style="display:none; margin-top:40px; padding:30px; background:white; border:1px solid #ddd; max-width:600px; margin-inline:auto;">
-                <h2 style="margin-bottom:20px;">Ödeme Bilgileri</h2>
+                <h2 style="margin-bottom:20px;">Teslimat ve Ödeme</h2>
+                
                 <form onsubmit="processPayment(event)">
-                    <input type="text" placeholder="Kart Sahibi" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc;" required>
+                    
+                    <h4 style="margin-bottom:10px; color:var(--dark-gold);">Teslimat Adresi</h4>
+                    <textarea placeholder="Açık Adres (Mahalle, Sokak, No...)" rows="3" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; font-family:inherit;" required></textarea>
+                    
+                    <div style="display:flex; gap:10px; margin-bottom:20px;">
+                        <input type="text" placeholder="Şehir" style="flex:1; padding:12px; border:1px solid #ccc;" required>
+                        <input type="text" placeholder="İlçe" style="flex:1; padding:12px; border:1px solid #ccc;" required>
+                    </div>
+
+                    <h4 style="margin-bottom:10px; color:var(--dark-gold);">Kart Bilgileri</h4>
+                    <input type="text" placeholder="Kart Üzerindeki İsim" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc;" required>
                     <input type="text" placeholder="Kart Numarası" maxlength="16" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc;" required>
+                    
                     <div style="display:flex; gap:10px;">
                         <input type="text" placeholder="AA/YY" style="flex:1; padding:12px; border:1px solid #ccc;" required>
-                        <input type="text" placeholder="CVV" style="flex:1; padding:12px; border:1px solid #ccc;" required>
+                        <input type="text" placeholder="CVV" maxlength="3" style="flex:1; padding:12px; border:1px solid #ccc;" required>
                     </div>
-                    <button type="submit" class="cta-button" style="width:100%; margin-top:20px; background:var(--dark-gold); color:white;">ÖDEMEYİ TAMAMLA</button>
+
+                    <button type="submit" class="cta-button" style="width:100%; margin-top:20px; background:var(--dark-gold); color:white;">SİPARİŞİ TAMAMLA</button>
                 </form>
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 MUCAK LUXURY</p>
-    </footer>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4 style="color:var(--dark-gold); font-size: 22px; letter-spacing: 4px;">MUCAK</h4>
+                <p style="line-height: 1.8; margin-bottom: 20px;">
+                    Zarafet bir seçenek değil, bir yaşam tarzıdır. Global moda anlayışını yerel dokunuşlarla harmanlıyoruz.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/mucakluxury" target="_blank" class="insta" title="Instagram'da Takip Et">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    
+                    <a href="https://twitter.com/mucakluxury" target="_blank" class="twitter" title="X'te Bizi Bul">
+                        <i class="fab fa-twitter"></i> </a>
+                    
+                    <a href="https://www.facebook.com/mucakluxury" target="_blank" class="facebook" title="Facebook Sayfamız">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    
+                    <a href="https://tr.pinterest.com/mucakluxury" target="_blank" class="pinterest" title="Koleksiyonlarımız">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Müşteri Hizmetleri</h4>
+                <ul>
+                    <li><a href="yardim.html">Sıkça Sorulan Sorular</a></li>
+                    <li><a href="yardim.html">Kargo ve Teslimat</a></li>
+                    <li><a href="yardim.html">İade ve Değişim</a></li>
+                    <li><a href="yardim.html">Beden Tablosu</a></li>
+                    <li><a href="yardim.html">Sipariş Takibi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kurumsal</h4>
+                <ul>
+                    <li><a href="index.html">Hakkımızda</a></li> <li><a href="iletisim.html">Kariyer</a></li>
+                    <li><a href="iletisim.html">Mağazalarımız</a></li>
+                    <li><a href="yardim.html">Gizlilik Politikası</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Bize Ulaşın</h4>
+                <p><i class="fas fa-map-marker-alt" style="margin-right:10px; color:var(--dark-gold);"></i> Abdi İpekçi Cad. No:42, Nişantaşı / İSTANBUL</p>
+                <p style="margin-top:10px;"><i class="fas fa-phone" style="margin-right:10px; color:var(--dark-gold);"></i> +90 (212) 345 67 89</p>
+                <p style="margin-top:10px;"><i class="fas fa-envelope" style="margin-right:10px; color:var(--dark-gold);"></i> info@mucakluxury.com</p>
+                
+                <h4 style="margin-top: 30px; font-size: 14px;">E-Bülten Aboneliği</h4>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="E-posta adresiniz">
+                    <button><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MUCAK LUXURY. Tüm hakları saklıdır.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/905432708677" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="script.js"></script>
 </body>
 </html>
